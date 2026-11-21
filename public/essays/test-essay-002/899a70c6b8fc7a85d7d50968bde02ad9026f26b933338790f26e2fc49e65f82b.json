@@ -1,0 +1,133 @@
+{
+  "contractVersion": 1,
+  "id": "test-essay-002",
+  "title": "Placeholder essay two",
+  "question": "How does the test reader display quotations and lists?",
+  "placeholder": true,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [
+        {
+          "text": "Placeholder quotation and list sample",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This is synthetic test content, not the Architect's philosophical writing. It is the second placeholder essay in the first test set.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "paragraphs": [
+        [
+          {
+            "text": "This quotation is a formatting fixture, not an attributed statement.",
+            "marks": []
+          }
+        ],
+        [
+          {
+            "text": "This second quotation paragraph includes ",
+            "marks": []
+          },
+          {
+            "text": "bold",
+            "marks": [
+              "bold"
+            ]
+          },
+          {
+            "text": " and ",
+            "marks": []
+          },
+          {
+            "text": "italic",
+            "marks": [
+              "italic"
+            ]
+          },
+          {
+            "text": " text.",
+            "marks": []
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": [
+        {
+          "text": "Unordered list",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": 1,
+      "items": [
+        [
+          {
+            "text": "First sample item.",
+            "marks": []
+          }
+        ],
+        [
+          {
+            "text": "Second sample item with ",
+            "marks": []
+          },
+          {
+            "text": "emphasis",
+            "marks": [
+              "bold"
+            ]
+          },
+          {
+            "text": ".",
+            "marks": []
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": [
+        {
+          "text": "Ordered list",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "This sample list starts at three.",
+            "marks": []
+          }
+        ],
+        [
+          {
+            "text": "This item follows it.",
+            "marks": []
+          }
+        ]
+      ]
+    }
+  ]
+}

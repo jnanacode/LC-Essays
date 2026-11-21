@@ -1,0 +1,18 @@
+{
+  "name": "lc-essays-publisher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26.13.1 <27"
+  },
+  "scripts": {
+    "test": "node --test scripts/*.test.mjs",
+    "build": "node scripts/publish.mjs",
+    "validate": "node scripts/publish.mjs --check"
+  },
+  "dependencies": {
+    "markdown-it": "15.0.3",
+    "yaml": "2.9.1"
+  }
+}

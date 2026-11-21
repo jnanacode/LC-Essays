@@ -1,0 +1,106 @@
+{
+  "contractVersion": 1,
+  "id": "test-essay-001",
+  "title": "Placeholder essay one",
+  "question": "How does the test reader display text?",
+  "placeholder": true,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [
+        {
+          "text": "Placeholder formatting sample",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This is synthetic test content for the LifetimeCounter reader. It is not the Architect's philosophical writing.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This paragraph contains ",
+          "marks": []
+        },
+        {
+          "text": "bold text",
+          "marks": [
+            "bold"
+          ]
+        },
+        {
+          "text": ", ",
+          "marks": []
+        },
+        {
+          "text": "italic text",
+          "marks": [
+            "italic"
+          ]
+        },
+        {
+          "text": ", and ",
+          "marks": []
+        },
+        {
+          "text": "combined emphasis",
+          "marks": [
+            "bold",
+            "italic"
+          ]
+        },
+        {
+          "text": ".",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": [
+        {
+          "text": "Soft wrapping",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "These two source lines belong to a single paragraph.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": [
+        {
+          "text": "Unicode sample",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Accented text remains intact: café, naïve, résumé. Greek: χρόνος.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}

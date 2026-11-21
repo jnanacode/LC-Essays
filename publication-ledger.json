@@ -1,0 +1,19 @@
+{
+  "contractVersion": 1,
+  "sets": [
+    {
+      "id": "test-set-001",
+      "essayIds": [
+        "test-essay-001",
+        "test-essay-002"
+      ]
+    },
+    {
+      "id": "test-set-002",
+      "essayIds": [
+        "test-essay-003",
+        "test-essay-004"
+      ]
+    }
+  ]
+}

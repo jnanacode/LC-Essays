@@ -1,0 +1,81 @@
+{
+  "contractVersion": 1,
+  "id": "test-essay-003",
+  "title": "Placeholder essay three",
+  "question": "Can the test reader distinguish the second set?",
+  "placeholder": true,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [
+        {
+          "text": "Second set placeholder",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This is synthetic test content, not the Architect's philosophical writing. This essay is the first member of the second test set.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": [
+        {
+          "text": "Visible identity",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "The catalogue places this essay after both members of the first set. Its stable identity is test-essay-003.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": 1,
+      "items": [
+        [
+          {
+            "text": "Set label: Placeholder set two.",
+            "marks": []
+          }
+        ],
+        [
+          {
+            "text": "Essay label: Placeholder essay three.",
+            "marks": []
+          }
+        ],
+        [
+          {
+            "text": "Position within this set: one.",
+            "marks": []
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This content is a fixture for later reader testing; it does not establish that app progression or storage has been implemented.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}

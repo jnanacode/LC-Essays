@@ -1,0 +1,41 @@
+{
+  "contractVersion": 1,
+  "sets": [
+    {
+      "id": "test-set-001",
+      "title": "Placeholder set one",
+      "essays": [
+        {
+          "id": "test-essay-001",
+          "title": "Placeholder essay one",
+          "revision": "ef3f611460c3e06dbd4652cc87dbc73476a0e4bdce7cd9f276e1983a589a565f",
+          "placeholder": true
+        },
+        {
+          "id": "test-essay-002",
+          "title": "Placeholder essay two",
+          "revision": "899a70c6b8fc7a85d7d50968bde02ad9026f26b933338790f26e2fc49e65f82b",
+          "placeholder": true
+        }
+      ]
+    },
+    {
+      "id": "test-set-002",
+      "title": "Placeholder set two",
+      "essays": [
+        {
+          "id": "test-essay-003",
+          "title": "Placeholder essay three",
+          "revision": "c364c77eb6ecb29098b1a7884be5e5508302ee10a2ae0aff60bec460ed2578c8",
+          "placeholder": true
+        },
+        {
+          "id": "test-essay-004",
+          "title": "Placeholder essay four",
+          "revision": "1a18e997c723674c60fcd955f23283385e407a4c71afc7516627660f390a317b",
+          "placeholder": true
+        }
+      ]
+    }
+  ]
+}

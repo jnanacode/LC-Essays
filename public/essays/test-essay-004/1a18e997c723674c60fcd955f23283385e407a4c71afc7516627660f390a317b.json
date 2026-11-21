@@ -1,0 +1,127 @@
+{
+  "contractVersion": 1,
+  "id": "test-essay-004",
+  "title": "Placeholder essay four",
+  "question": "Does the final placeholder remain identifiable?",
+  "placeholder": true,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [
+        {
+          "text": "Final placeholder sample",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This is synthetic test content, not the Architect's philosophical writing. It is the second essay in the second test set and the final member of this initial fixture.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": [
+        {
+          "text": "Formatting recap",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "This paragraph combines ",
+          "marks": []
+        },
+        {
+          "text": "bold",
+          "marks": [
+            "bold"
+          ]
+        },
+        {
+          "text": ", ",
+          "marks": []
+        },
+        {
+          "text": "italic",
+          "marks": [
+            "italic"
+          ]
+        },
+        {
+          "text": ", and ",
+          "marks": []
+        },
+        {
+          "text": "both marks",
+          "marks": [
+            "bold",
+            "italic"
+          ]
+        },
+        {
+          "text": ".",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "paragraphs": [
+        [
+          {
+            "text": "This is an invented quotation used only to test presentation.",
+            "marks": []
+          }
+        ]
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "items": [
+        [
+          {
+            "text": "First sample item.",
+            "marks": []
+          }
+        ],
+        [
+          {
+            "text": "Second sample item.",
+            "marks": []
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": [
+        {
+          "text": "End of fixture",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "The visible label is Placeholder essay four. This text does not claim that the app has downloaded, saved, revealed, or marked any essay as read.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}
