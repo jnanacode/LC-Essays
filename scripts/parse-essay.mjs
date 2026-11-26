@@ -4,6 +4,8 @@ import { LIMITS, check, text, validateFrontmatter, splitText, serial, digest, by
 
 const markdown = new MarkdownIt({ html: true, linkify: false, typographer: false });
 const forbidden = /\[\[|\]\]|!\[|\[\^|(?:https?:\/\/|www\.)/i;
+const obsidianOnly = /%%|==[^=\s](?:[^=\n]*[^=\s])?==|^[ \t]*>[ \t>]*\[!/m;
+const obsidianMessage = 'Obsidian-only syntax (%%comments%%, ==highlights== and > [!callouts]) is not supported';
 
 function inlineContent(token) {
   check(token?.type === 'inline' && Array.isArray(token.children), 'Expected inline text');
@@ -32,6 +34,7 @@ function inlineContent(token) {
 export function parseBody(body) {
   text(body, 'Essay body');
   check(!forbidden.test(body), 'Links, embeds and footnotes are not supported');
+  check(!obsidianOnly.test(body), obsidianMessage);
   const environment = {};
   const tokens = markdown.parse(body, environment);
   check(!environment.references || Object.keys(environment.references).length === 0, 'Reference links are not supported');
@@ -103,6 +106,10 @@ export function parseEssay(input, label = 'Essay source') {
     check(!isAlias(node) && !node?.anchor && !node?.tag, `${label}: YAML aliases, anchors and explicit tags are unsupported`);
   });
   const frontmatter = validateFrontmatter(doc.toJS({ maxAliasCount: 0 }), label);
+  for (const field of ['title', 'question']) {
+    check(!forbidden.test(frontmatter[field]), `${label}: ${field} must not contain links, embeds or web addresses`);
+    check(!obsidianOnly.test(frontmatter[field]), `${label}: ${field} contains ${obsidianMessage}`);
+  }
   const blocks = parseBody(source.slice(end + 5));
   const payload = { contractVersion: 1, id: frontmatter.essay_id, title: frontmatter.title, question: frontmatter.question, placeholder: frontmatter.placeholder, blocks };
   const json = serial(payload);
