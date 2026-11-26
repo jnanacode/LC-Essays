@@ -61,3 +61,31 @@ test('source byte and output block limits are enforced', () => {
   assert.throws(() => parseEssay(source('é'.repeat(LIMITS.essayBytes))));
   assert.throws(() => parseBody(Array.from({ length: LIMITS.blocks + 1 }, () => 'Paragraph.').join('\n\n')));
 });
+
+test('Obsidian-only syntax is rejected instead of being published as literal text', () => {
+  const cases = ['%%hidden note%%', 'Visible %% hidden', 'Text with ==highlight== inside.', '> [!note] A callout', '> [!warning]\n> Careful.', '>> [!note] Nested callout'];
+  for (const body of cases) assert.throws(() => parseBody(body), /Obsidian-only/, body);
+});
+
+test('ordinary uses of percent and equals signs remain allowed', () => {
+  const [paragraph] = parseBody('About 100% sure that x == y, and a = b.');
+  assert.equal(paragraph.content.map((run) => run.text).join(''), 'About 100% sure that x == y, and a = b.');
+});
+
+test('title and question reject links, web addresses and Obsidian-only syntax', () => {
+  const cases = [
+    source().replace('title: Test essay', 'title: See https://example.com'),
+    source().replace('question: A test question?', 'question: Visit www.example.com now?'),
+    source().replace('question: A test question?', 'question: What about [[Private note]]?'),
+    source().replace('title: Test essay', 'title: A %% hidden'),
+    source().replace('question: A test question?', 'question: Is ==this== marked?'),
+  ];
+  for (const value of cases) assert.throws(() => parseEssay(value));
+  assert.doesNotThrow(() => parseEssay(source()));
+});
+
+test('backslash escapes and character entities become plain text', () => {
+  const [paragraph] = parseBody('Star \\*literal\\* and &amp; sign.');
+  assert.equal(paragraph.content.map((run) => run.text).join(''), 'Star *literal* and & sign.');
+  assert.ok(paragraph.content.every((run) => run.marks.length === 0));
+});
